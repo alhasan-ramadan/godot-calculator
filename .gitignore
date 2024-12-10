@@ -9,6 +9,7 @@
 *.app
 *.bat
 *.cgi
+*.exe
 *.com
 *.gadget
 *.jar

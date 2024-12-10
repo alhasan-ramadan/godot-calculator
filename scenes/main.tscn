@@ -1,18 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://daabkqotbq2oj"]
+[gd_scene load_steps=2 format=3 uid="uid://daabkqotbq2oj"]
 
-[ext_resource type="FontFile" uid="uid://vuqbxsandcr1" path="res://assets/fonts/DS-DIGI.TTF" id="1_ofned"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_q32op"]
-[ext_resource type="Theme" uid="uid://dknlvjdcml8jt" path="res://assets/themes/button.theme" id="1_yexta"]
-[ext_resource type="Texture2D" uid="uid://dhbfk5nwda72i" path="res://assets/pictures/calculator_display.png" id="2_kyyor"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vhc6f"]
-font = ExtResource("1_ofned")
-font_size = 64
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_i8dhd"]
-font_size = 64
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -30,448 +18,281 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+color = Color(0.0674377, 0.0674377, 0.0674377, 1)
 
 [node name="numbers" type="Node" parent="background"]
 
 [node name="ce" type="Button" parent="background/numbers"]
-offset_left = 15.0
-offset_top = 647.0
-offset_right = 152.0
-offset_bottom = 784.0
-theme = ExtResource("1_yexta")
+modulate = Color(1, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.228
+anchor_right = 0.493
+anchor_bottom = 0.373
+offset_left = -0.200001
+offset_top = -0.23201
+offset_right = 0.199982
+offset_bottom = -0.11203
+theme_override_font_sizes/font_size = 64
+text = "CE"
+
+[node name="double_zero" type="Button" parent="background/numbers"]
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.838
+anchor_right = 0.255
+anchor_bottom = 0.983
+offset_left = -0.200001
+offset_top = -0.0720825
+offset_right = -1.52588e-05
+offset_bottom = 0.0479736
+theme_override_font_sizes/font_size = 64
+text = "00"
 
 [node name="zero" type="Button" parent="background/numbers"]
-offset_left = 159.0
-offset_top = 647.0
-offset_right = 296.0
-offset_bottom = 784.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.838
+anchor_right = 0.493
+anchor_bottom = 0.983
+offset_left = -1.52588e-05
+offset_top = -0.0720825
+offset_right = 0.199982
+offset_bottom = 0.0479736
+theme_override_font_sizes/font_size = 64
+text = "0"
 
 [node name="one" type="Button" parent="background/numbers"]
-offset_left = 16.0
-offset_top = 503.0
-offset_right = 153.0
-offset_bottom = 640.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.685
+anchor_right = 0.255
+anchor_bottom = 0.831
+offset_left = -0.200001
+offset_top = 0.359924
+offset_right = -1.52588e-05
+offset_bottom = -0.46405
+theme_override_font_sizes/font_size = 64
+text = "1"
 
 [node name="two" type="Button" parent="background/numbers"]
-offset_left = 159.0
-offset_top = 503.0
-offset_right = 296.0
-offset_bottom = 640.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.685
+anchor_right = 0.493
+anchor_bottom = 0.831
+offset_left = -1.52588e-05
+offset_top = 0.359924
+offset_right = 0.199982
+offset_bottom = -0.46405
+theme_override_font_sizes/font_size = 64
+text = "2"
 
 [node name="three" type="Button" parent="background/numbers"]
-offset_left = 303.0
-offset_top = 503.0
-offset_right = 440.0
-offset_bottom = 640.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.685
+anchor_right = 0.733
+anchor_bottom = 0.831
+offset_top = 0.359924
+offset_right = 0.199982
+offset_bottom = -0.46405
+theme_override_font_sizes/font_size = 64
+text = "3"
 
 [node name="four" type="Button" parent="background/numbers"]
-offset_left = 16.0
-offset_top = 359.0
-offset_right = 153.0
-offset_bottom = 496.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.533
+anchor_right = 0.255
+anchor_bottom = 0.678
+offset_left = -0.200001
+offset_top = -0.152039
+offset_right = -1.52588e-05
+offset_bottom = -0.0320435
+theme_override_font_sizes/font_size = 64
+text = "4"
 
 [node name="five" type="Button" parent="background/numbers"]
-offset_left = 159.0
-offset_top = 359.0
-offset_right = 296.0
-offset_bottom = 496.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.533
+anchor_right = 0.493
+anchor_bottom = 0.678
+offset_left = -1.52588e-05
+offset_top = -0.152039
+offset_right = 0.199982
+offset_bottom = -0.0320435
+theme_override_font_sizes/font_size = 64
+text = "5"
 
 [node name="six" type="Button" parent="background/numbers"]
-offset_left = 303.0
-offset_top = 359.0
-offset_right = 440.0
-offset_bottom = 496.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.533
+anchor_right = 0.733
+anchor_bottom = 0.678
+offset_top = -0.152039
+offset_right = 0.199982
+offset_bottom = -0.0320435
+theme_override_font_sizes/font_size = 64
+text = "6"
 
 [node name="seven" type="Button" parent="background/numbers"]
-offset_left = 16.0
-offset_top = 215.0
-offset_right = 153.0
-offset_bottom = 352.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.38
+anchor_right = 0.255
+anchor_bottom = 0.525
+offset_left = -0.200001
+offset_top = 0.279968
+offset_right = -1.52588e-05
+offset_bottom = 0.399963
+theme_override_font_sizes/font_size = 64
+text = "7"
 
 [node name="eight" type="Button" parent="background/numbers"]
-offset_left = 159.0
-offset_top = 215.0
-offset_right = 296.0
-offset_bottom = 352.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.38
+anchor_right = 0.493
+anchor_bottom = 0.525
+offset_left = -1.52588e-05
+offset_top = 0.279968
+offset_right = 0.199982
+offset_bottom = 0.399963
+theme_override_font_sizes/font_size = 64
+text = "8"
 
 [node name="nine" type="Button" parent="background/numbers"]
-offset_left = 303.0
-offset_top = 215.0
-offset_right = 440.0
-offset_bottom = 352.0
-theme = ExtResource("1_yexta")
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.38
+anchor_right = 0.733
+anchor_bottom = 0.525
+offset_top = 0.279968
+offset_right = 0.199982
+offset_bottom = 0.399963
+theme_override_font_sizes/font_size = 64
+text = "9"
 
 [node name="operations" type="Node" parent="background"]
 
 [node name="equal" type="Button" parent="background/operations"]
-offset_left = 303.0
-offset_top = 647.0
-offset_right = 440.0
-offset_bottom = 784.0
-theme = ExtResource("1_yexta")
+modulate = Color(0.26656, 0.43155, 1, 1)
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.228
+anchor_right = 0.973
+anchor_bottom = 0.373
+offset_top = -0.23201
+offset_right = 0.199951
+offset_bottom = -0.11203
+theme_override_font_sizes/font_size = 64
+text = "="
 
 [node name="addition" type="Button" parent="background/operations"]
-offset_left = 447.0
-offset_top = 647.0
-offset_right = 584.0
-offset_bottom = 784.0
-theme = ExtResource("1_yexta")
+modulate = Color(0, 0.984314, 1, 1)
+anchors_preset = -1
+anchor_left = 0.745
+anchor_top = 0.838
+anchor_right = 0.973
+anchor_bottom = 0.983
+offset_left = -3.05176e-05
+offset_top = -0.0720825
+offset_right = 0.199951
+offset_bottom = 0.0479736
+theme_override_font_sizes/font_size = 64
+text = "+"
 
 [node name="subtraction" type="Button" parent="background/operations"]
-offset_left = 447.0
-offset_top = 503.0
-offset_right = 584.0
-offset_bottom = 640.0
-theme = ExtResource("1_yexta")
+modulate = Color(0, 0.984314, 1, 1)
+anchors_preset = -1
+anchor_left = 0.745
+anchor_top = 0.685
+anchor_right = 0.973
+anchor_bottom = 0.831
+offset_left = -3.05176e-05
+offset_top = 0.359924
+offset_right = 0.199951
+offset_bottom = -0.46405
+theme_override_font_sizes/font_size = 64
+text = "-"
 
 [node name="multiplication" type="Button" parent="background/operations"]
-offset_left = 447.0
-offset_top = 359.0
-offset_right = 584.0
-offset_bottom = 496.0
-theme = ExtResource("1_yexta")
+modulate = Color(0, 0.984314, 1, 1)
+anchors_preset = -1
+anchor_left = 0.745
+anchor_top = 0.533
+anchor_right = 0.973
+anchor_bottom = 0.678
+offset_left = -3.05176e-05
+offset_top = -0.152039
+offset_right = 0.199951
+offset_bottom = -0.0320435
+theme_override_font_sizes/font_size = 64
+text = "*"
 
 [node name="division" type="Button" parent="background/operations"]
-offset_left = 447.0
-offset_top = 215.0
-offset_right = 584.0
-offset_bottom = 352.0
-theme = ExtResource("1_yexta")
+modulate = Color(0, 0.983334, 1, 1)
+anchors_preset = -1
+anchor_left = 0.745
+anchor_top = 0.38
+anchor_right = 0.973
+anchor_bottom = 0.525
+offset_left = -3.05176e-05
+offset_top = 0.279968
+offset_right = 0.199951
+offset_bottom = 0.399963
+theme_override_font_sizes/font_size = 64
+text = "/"
+
+[node name="komma" type="Button" parent="background/operations"]
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.838
+anchor_right = 0.733
+anchor_bottom = 0.983
+offset_top = -0.0720825
+offset_right = 0.199982
+offset_bottom = 0.0479736
+theme_override_font_sizes/font_size = 64
+text = "."
 
 [node name="display" type="Node" parent="background"]
 
-[node name="Sprite2D" type="Sprite2D" parent="background/display"]
-position = Vector2(300, 112)
-texture = ExtResource("2_kyyor")
+[node name="ColorRect" type="ColorRect" parent="background/display"]
+anchors_preset = -1
+anchor_left = 0.027
+anchor_top = 0.017
+anchor_right = 0.973
+anchor_bottom = 0.22
+offset_left = -0.200001
+offset_top = -0.0480003
+offset_right = 0.199951
+offset_bottom = 0.319992
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.106237, 0.106237, 0.106237, 1)
 
 [node name="display" type="Label" parent="background/display"]
 physics_interpolation_mode = 0
 anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 5.8
-offset_top = 0.399998
-offset_right = -7.80005
-offset_bottom = -1.52588e-05
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="zero_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 196.8
-offset_top = 645.4
-offset_right = -339.8
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
+anchor_left = 0.038
+anchor_top = 0.087
+anchor_right = 0.95
+anchor_bottom = 0.156
+offset_left = 0.199999
+offset_top = -0.128006
+offset_bottom = -0.264008
+theme_override_font_sizes/font_size = 64
 text = "0"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="ce_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 36.8
-offset_top = 645.4
-offset_right = -467.8
-offset_bottom = 520.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "CE"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="komma_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 479.8
-offset_top = 636.4
-offset_right = -48.8
-offset_bottom = 534.0
-theme_override_font_sizes/font_size = 30
-text = "+"
-label_settings = SubResource("LabelSettings_i8dhd")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="addition_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 335.8
-offset_top = 635.4
-offset_right = -192.8
-offset_bottom = 533.0
-theme_override_font_sizes/font_size = 30
-text = "="
-label_settings = SubResource("LabelSettings_i8dhd")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="subtraction_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 475.8
-offset_top = 464.4
-offset_right = -52.8
-offset_bottom = 362.0
-theme_override_font_sizes/font_size = 30
-text = "_"
-label_settings = SubResource("LabelSettings_i8dhd")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="multiplication_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 479.8
-offset_top = 358.4
-offset_right = -48.8
-offset_bottom = 256.0
-theme_override_font_sizes/font_size = 30
-text = "*"
-label_settings = SubResource("LabelSettings_i8dhd")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="division_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 475.8
-offset_top = 202.4
-offset_right = -52.8
-offset_bottom = 100.0
-theme_override_font_sizes/font_size = 30
-text = "/"
-label_settings = SubResource("LabelSettings_i8dhd")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="one_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.11
-anchor_top = 0.652
-anchor_right = 0.162
-anchor_bottom = 0.734
-offset_left = 1.99999
-offset_top = -1.60004
-offset_right = 1.8
-offset_bottom = -2.20001
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "1"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="two_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 195.8
-offset_top = 501.4
-offset_right = -340.8
-offset_bottom = 376.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "2"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="three_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 340.8
-offset_top = 502.4
-offset_right = -195.8
-offset_bottom = 377.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "3"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="four_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 46.8
-offset_top = 359.4
-offset_right = -489.8
-offset_bottom = 234.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "4"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="five_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 195.8
-offset_top = 359.4
-offset_right = -340.8
-offset_bottom = 234.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "5"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="six_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 337.8
-offset_top = 359.4
-offset_right = -198.8
-offset_bottom = 234.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "6"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="seven_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 49.8
-offset_top = 216.4
-offset_right = -486.8
-offset_bottom = 91.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "7"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="eight_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 194.8
-offset_top = 215.4
-offset_right = -341.8
-offset_bottom = 90.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "8"
-label_settings = SubResource("LabelSettings_vhc6f")
-horizontal_alignment = 2
-vertical_alignment = 1
-text_overrun_behavior = 3
-
-[node name="nine_display" type="Label" parent="background/display"]
-physics_interpolation_mode = 0
-anchors_preset = -1
-anchor_left = 0.027
-anchor_top = 0.022
-anchor_right = 0.973
-anchor_bottom = 0.26
-offset_left = 340.8
-offset_top = 215.4
-offset_right = -195.8
-offset_bottom = 90.0
-theme_override_fonts/font = ExtResource("1_ofned")
-theme_override_font_sizes/font_size = 30
-text = "9"
-label_settings = SubResource("LabelSettings_vhc6f")
 horizontal_alignment = 2
 vertical_alignment = 1
 text_overrun_behavior = 3
 
 [connection signal="pressed" from="background/numbers/ce" to="." method="_on_ce_pressed"]
+[connection signal="pressed" from="background/numbers/double_zero" to="." method="_on_double_zero_pressed"]
 [connection signal="pressed" from="background/numbers/zero" to="." method="_on_zero_pressed"]
 [connection signal="pressed" from="background/numbers/one" to="." method="_on_one_pressed"]
 [connection signal="pressed" from="background/numbers/two" to="." method="_on_two_pressed"]
@@ -487,3 +308,4 @@ text_overrun_behavior = 3
 [connection signal="pressed" from="background/operations/subtraction" to="." method="_on_subtraction_pressed"]
 [connection signal="pressed" from="background/operations/multiplication" to="." method="_on_multiplication_pressed"]
 [connection signal="pressed" from="background/operations/division" to="." method="_on_division_pressed"]
+[connection signal="pressed" from="background/operations/komma" to="." method="_on_komma_pressed"]

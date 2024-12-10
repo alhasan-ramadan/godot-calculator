@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://daabkqotbq2oj"]
+[gd_scene load_steps=7 format=3 uid="uid://daabkqotbq2oj"]
 
 [ext_resource type="FontFile" uid="uid://vuqbxsandcr1" path="res://assets/fonts/DS-DIGI.TTF" id="1_ofned"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_q32op"]
 [ext_resource type="Theme" uid="uid://dknlvjdcml8jt" path="res://assets/themes/button.theme" id="1_yexta"]
 [ext_resource type="Texture2D" uid="uid://dhbfk5nwda72i" path="res://assets/pictures/calculator_display.png" id="2_kyyor"]
 
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q32op")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -111,7 +113,7 @@ theme = ExtResource("1_yexta")
 
 [node name="operations" type="Node" parent="background"]
 
-[node name="komma" type="Button" parent="background/operations"]
+[node name="equal" type="Button" parent="background/operations"]
 offset_left = 303.0
 offset_top = 647.0
 offset_right = 440.0
@@ -165,7 +167,6 @@ offset_right = -7.80005
 offset_bottom = -1.52588e-05
 theme_override_fonts/font = ExtResource("1_ofned")
 theme_override_font_sizes/font_size = 30
-text = "0."
 label_settings = SubResource("LabelSettings_vhc6f")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -216,14 +217,13 @@ anchor_left = 0.027
 anchor_top = 0.022
 anchor_right = 0.973
 anchor_bottom = 0.26
-offset_left = 332.8
-offset_top = 633.4
-offset_right = -203.8
-offset_bottom = 508.0
-theme_override_fonts/font = ExtResource("1_ofned")
+offset_left = 479.8
+offset_top = 636.4
+offset_right = -48.8
+offset_bottom = 534.0
 theme_override_font_sizes/font_size = 30
-text = ","
-label_settings = SubResource("LabelSettings_vhc6f")
+text = "+"
+label_settings = SubResource("LabelSettings_i8dhd")
 horizontal_alignment = 2
 vertical_alignment = 1
 text_overrun_behavior = 3
@@ -235,12 +235,12 @@ anchor_left = 0.027
 anchor_top = 0.022
 anchor_right = 0.973
 anchor_bottom = 0.26
-offset_left = 479.8
-offset_top = 636.4
-offset_right = -48.8
-offset_bottom = 534.0
+offset_left = 335.8
+offset_top = 635.4
+offset_right = -192.8
+offset_bottom = 533.0
 theme_override_font_sizes/font_size = 30
-text = "+"
+text = "="
 label_settings = SubResource("LabelSettings_i8dhd")
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -470,3 +470,20 @@ label_settings = SubResource("LabelSettings_vhc6f")
 horizontal_alignment = 2
 vertical_alignment = 1
 text_overrun_behavior = 3
+
+[connection signal="pressed" from="background/numbers/ce" to="." method="_on_ce_pressed"]
+[connection signal="pressed" from="background/numbers/zero" to="." method="_on_zero_pressed"]
+[connection signal="pressed" from="background/numbers/one" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="background/numbers/two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="background/numbers/three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="background/numbers/four" to="." method="_on_four_pressed"]
+[connection signal="pressed" from="background/numbers/five" to="." method="_on_five_pressed"]
+[connection signal="pressed" from="background/numbers/six" to="." method="_on_six_pressed"]
+[connection signal="pressed" from="background/numbers/seven" to="." method="_on_seven_pressed"]
+[connection signal="pressed" from="background/numbers/eight" to="." method="_on_eight_pressed"]
+[connection signal="pressed" from="background/numbers/nine" to="." method="_on_nine_pressed"]
+[connection signal="pressed" from="background/operations/equal" to="." method="_on_equal_pressed"]
+[connection signal="pressed" from="background/operations/addition" to="." method="_on_addition_pressed"]
+[connection signal="pressed" from="background/operations/subtraction" to="." method="_on_subtraction_pressed"]
+[connection signal="pressed" from="background/operations/multiplication" to="." method="_on_multiplication_pressed"]
+[connection signal="pressed" from="background/operations/division" to="." method="_on_division_pressed"]
